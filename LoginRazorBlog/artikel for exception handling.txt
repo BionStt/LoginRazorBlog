@@ -1,0 +1,22 @@
+﻿1. UseDeveloperExceptionPage() - Inspect exception details during development
+
+2. UseExceptionHandler() - Handover the control to a custom error handler
+
+3. UseStatusCodePages() - Show error pages for HTTP status codes
+
+4. UseStatusCodePagesWithRedirects() - Perform URL redirection upon error
+
+5. UseStatusCodePagesWithReExecute() - Re-execute the request pipeline with alternate action
+
+http://www.binaryintellect.net/articles/17841890-a0a2-4094-aabe-1ae85641609c.aspx
+
+https://github.com/mehdihadeli/awesome-dotnet-core-education/blob/main/docs/exception-handling.md
+
+https://kumarashwinhubert.com/10-exception-handling-best-practices-in-csharp
+
+
+//cost of exceptions can be very high.
+https://gunnarpeipman.com/cost-of-exceptions/
+
+https://buildplease.com/pages/slow-exceptions/
+

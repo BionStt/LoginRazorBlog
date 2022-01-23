@@ -1,0 +1,20 @@
+﻿@page "/Error2/Error2"
+@model LoginRazorBlog.Pages.Error2.Error2
+
+<h1>Message : @ViewData["message"]</h1>
+
+<h2>Status Code : @ViewData["statusCode"]</h2>
+
+<div>Stack Trace : @ViewData["stackTrace"]</div>
+
+<br />
+
+@if(Model.Message!=string.Empty){
+    <h1>Message : @Model.Message</h1>
+}
+
+<h2>Status Code : @Model.statusCode</h2>
+
+@if(Model.stackTrace!=string.Empty){
+    <Div>Stack Trace : @Model.stackTrace</Div>
+}

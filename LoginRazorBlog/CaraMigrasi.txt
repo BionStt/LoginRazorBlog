@@ -1,0 +1,11 @@
+﻿EntityFrameworkCore/Add-Migration InitialCreate1 -Context AuthContext -OutputDir Infrastructure/Migrations
+
+Add-Migration InitialCreate1 -Context AuthContext -OutputDir Infrastructure/Migrations
+
+
+EntityFrameworkCore/UPDATE-DATABASE -CONTEXT AuthContext
+
+
+UPDATE-DATABASE -CONTEXT AuthContext
+
+add-migration Initial -Context "ContextName" -StartupProject "EntryProject.Name" -Project "MigrationProject.Name"

@@ -1,0 +1,68 @@
+﻿
+@page "/Login/SignIn"
+@model LoginRazorBlog.Pages.Login.SignInModel
+@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet _javaScriptSnippet
+
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Admin Sign In
+      </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+@*    <partial name="_Favicons" />*@
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <environment include="Development">
+        <link href="~/css/bundle.css" rel="stylesheet" asp-append-version="true" />
+    </environment>
+    <environment exclude="Development">
+        <link href="~/css/bundle.min.css" rel="stylesheet" asp-append-version="true" />
+        @Html.Raw(_javaScriptSnippet.FullScript)
+    </environment>
+</head>
+<body class="bg-gray-1 pt-5">
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-4">
+                <div class="card">
+                    <h6 class="card-header">Sign In</h6>
+                    <div class="card-body">
+                          <form method="post">
+                            <div asp-validation-summary="All" class="text-danger"></div>
+                       
+                            <div class="form-floating mb-3">
+                                <input asp-for="Username" class="form-control" placeholder="@Html.DisplayNameFor(m => m.Username)" required />
+                                <label asp-for="Username"></label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input asp-for="Password" class="form-control" required placeholder="@Html.DisplayNameFor(m => m.Password)" />
+                                <label asp-for="Password"></label>
+                            </div>
+                                                      
+
+                            <hr />
+                            <input type="submit" value="Sign In" class="btn btn-success" />
+                        </form>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/twitter-bootstrap/js/bootstrap.bundle.min.js" asp-append-version="true"></script>
+    <environment include="Development">
+        <script src="~/js/dist/app-bundle.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="~/js/dist/app-bundle.min.js" asp-append-version="true"></script>
+    </environment>
+   
+</body>
+</html>
